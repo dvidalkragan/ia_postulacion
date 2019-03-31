@@ -1,0 +1,16 @@
+.label-item{
+  color: white
+}
+h1{
+  color:white
+}
+h6 {
+  color:white
+}
+.image{
+         height:40em;
+         background-size:cover;
+         width:auto;
+         background-image:url('../../assets/img/background-phone.jpg');
+         background-position:50% 140%;
+       }

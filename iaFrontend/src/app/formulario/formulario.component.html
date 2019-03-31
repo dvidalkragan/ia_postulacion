@@ -1,0 +1,26 @@
+<br><br>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="form-group">
+        <label for="formGroupExampleInput" class="label-item">Nombre*</label>
+        <input [(ngModel)]="persona.nombre"  type="text" class="form-control" id="nombre" name="nombre" placeholder="Ej. Jose Carrasco">
+      </div>
+      <div class="form-group">
+        <label for="formGroupExampleInput" class="label-item">Correo*</label>
+        <input [(ngModel)]="persona.email" type="email" class="form-control" id="email" name="email" placeholder="Ej. correo@gmail.com">
+      </div>
+    </div>
+    <div class="col">
+      <div class="form-group">
+        <label for="exampleInputPassword1" class="label-item">Teléfono*</label>
+        <input [(ngModel)]="persona.telefono" type="text" class="form-control" id="telefono" name="telefono" placeholder="Ej. +56 9 12345678">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1" class="label-item">Rut*</label>
+        <input [(ngModel)]="persona.rut" type="text" class="form-control" id="rut" name="rut" placeholder="Ej. 26.493.293-1">
+      </div>
+    </div>
+  </div>
+  <br>
+<button (click)="postData()" type="button" class="btn btn-block btn-success">Inscribirse</button>
