@@ -20,6 +20,10 @@ export class FormularioComponent {
   constructor(private toastr: ToastrService, private applicantService: ApplicantService) {
   }
 
+//Esta funcion me permite tomar y validar en el FrontEnd los datos aportados por el usuario
+//Estoy muy conciente que puede haber una mejor manera de validacion de formularios,
+//pero dada mi expertiz y rapidez que debia tener para entregar la solución, creo que cumple con
+//lo pedido. Ademas muestra con la funcionalidad Toastr si existe un error o se realizo todo ok.
   postData() {
     let messages:any = [];
 
