@@ -7,7 +7,7 @@ import { Applicant } from '../interfaces/applicant';
 })
 export class ApplicantService {
 
-  API_Laravel = 'http://localhost:8000/api/v1/';
+  API_Laravel = 'http://3.8.126.234/api/v1/';
 
   constructor(private httpClient: HttpClient) { }
 
