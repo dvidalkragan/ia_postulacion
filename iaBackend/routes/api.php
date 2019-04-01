@@ -20,7 +20,7 @@ Route::group(['prefix' => 'v1'], function () {
         Route::get('/','ApiUserController@me');
     });
 
-    Route::group(['prefix' => 'landing/subscriptions'], function() {
+    Route::group(['middleware'=>'cors','prefix' => 'landing/subscriptions'], function() {
 
         // MySQL Routes and Controllers
         //Route::get('/','CursoVeranoSQLController@list');
