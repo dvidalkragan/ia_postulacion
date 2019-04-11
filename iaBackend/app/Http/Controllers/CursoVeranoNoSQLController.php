@@ -60,7 +60,7 @@ class CursoVeranoNoSQLController extends Controller
      * @return \Illuminate\Http\JsonResponse
      */
     public function delete($rut) {
-        if(auth('api')->user()) {
+        //if(auth('api')->user()) {
             $applicant = CursoVeranoNoSQL::where('rut',$rut)->get()->first();
 
             if($applicant) {
@@ -74,8 +74,8 @@ class CursoVeranoNoSQLController extends Controller
             else {
                 return response()->json(["error" => "Bad Request"], 400);
             }
-        }
+        //}
 
-        return response()->json(["error" => "Unauthorized"], 401 );
+        //return response()->json(["error" => "Unauthorized"], 401 );
     }
 }

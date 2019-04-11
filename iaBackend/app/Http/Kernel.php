@@ -19,8 +19,8 @@ class Kernel extends HttpKernel
         \App\Http\Middleware\TrimStrings::class,
         \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
         \App\Http\Middleware\TrustProxies::class,
-        \Barryvdh\Cors\HandleCors::class,
-        //\App\Http\Middleware\Cors::class,
+        //\Barryvdh\Cors\HandleCors::class,
+        \App\Http\Middleware\Cors::class,
     ];
 
     /**
@@ -37,10 +37,6 @@ class Kernel extends HttpKernel
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
             \App\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
-        ],
-
-        'cors' => [
-            \Barryvdh\Cors\HandleCors::class,
         ],
 
         'api' => [
@@ -68,7 +64,7 @@ class Kernel extends HttpKernel
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
         'jwt.auth' => \Tymon\JWTAuth\Http\Middleware\Authenticate::class,
         'jwt.refresh' => \Tymon\JWTAuth\Http\Middleware\RefreshToken::class,
-        'cors' => \Barryvdh\Cors\HandleCors::class,
+        'cors' => \App\Http\Middleware\Cors::class,//\Barryvdh\Cors\HandleCors::class,
     ];
 
     /**

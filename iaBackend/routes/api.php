@@ -15,19 +15,19 @@ Route::post('login','ApiAuthController@login');
 Route::post('logout','ApiAuthController@logout');
 
 
-Route::group(['prefix' => 'v1'], function () {
+Route::group(['middleware' => ['cors', 'bindings'], 'prefix' => 'v1'], function () {
     Route::group(['middleware'=> 'api', 'prefix' => 'users'], function() {
         Route::get('/','ApiUserController@me');
     });
 
-    Route::group(['middleware'=>'cors','prefix' => 'landing/subscriptions'], function() {
+    Route::group(['prefix' => 'landing/subscriptions'], function() {
 
         // MySQL Routes and Controllers
         //Route::get('/','CursoVeranoSQLController@list');
         //Route::post('/','CursoVeranoSQLController@new');
         //Route::delete('/{rut}','CursoVeranoSQLController@delete');
 
-        // MongoDB Routes and Controllers
+        //MongoDB Routes and Controllers
         Route::get('/','CursoVeranoNoSQLController@list');
         Route::post('/','CursoVeranoNoSQLController@new');
         Route::delete('/{rut}','CursoVeranoNoSQLController@delete');
